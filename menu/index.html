@@ -106,25 +106,29 @@
 .whatsapp-icon{width:22px;height:22px}
 .back-icon{transform:rotate(180deg)}
 
+
+.float-whatsapp{
+  position:fixed;left:20px;bottom:88px;z-index:30;width:58px;height:58px;
+  border-radius:50%;display:grid;place-items:center;background:#20c96b;color:#fff;
+  text-decoration:none;box-shadow:0 12px 35px rgba(0,0,0,.4);
+  border:3px solid rgba(255,255,255,.25);transition:.2s ease
+}
+.float-whatsapp:hover{transform:translateY(-2px) scale(1.04)}
+.float-icon{width:26px;height:26px;fill:currentColor}
+@media(max-width:560px){
+  .float-whatsapp{left:12px;bottom:max(76px,calc(68px + env(safe-area-inset-bottom)));width:54px;height:54px}
+  .float-icon{width:24px;height:24px}
+}
+
 </style>
 </head>
 <body>
 <div class="wrap">
 <header class="topbar"><div class="brand-mini"><a href="/" aria-label="العودة للرئيسية"><img src="assets/logo.png" alt="شعار فخارة"></a><span>فخارة</span></div><div class="status">جاهزين لطلبك</div></header>
 <section class="hero">
-<div class="hero-grid"><img class="hero-logo" src="assets/logo.png" alt="Fokhara logo"><div><span class="eyebrow">أصالة الطعم في كل فخارة</span><h1>قائمة فخارة</h1><h2>FOKHARA MENU</h2><p>طعم شرقي بجودة بلدي، مقدم بروح عصرية وتجربة رقمية سهلة.</p><div class="actions">
-<a class="btn btn-main" href="/" aria-label="الرجوع للرئيسية">
-<svg class="btn-icon back-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-<path d="M14.7 5.3a1 1 0 0 1 0 1.4L10.4 11H20a1 1 0 1 1 0 2h-9.6l4.3 4.3a1 1 0 1 1-1.4 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.4 0Z"/>
-</svg>
-رجوع
-</a>
-<a class="btn btn-ghost whatsapp-btn" href="https://wa.me/201004451689" target="_blank" rel="noreferrer" aria-label="اطلب عبر واتساب">
-<svg class="btn-icon whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-<path d="M12 2.2a9.8 9.8 0 0 0-8.45 14.75L2.3 21.7l4.9-1.2A9.8 9.8 0 1 0 12 2.2Zm0 17.6a7.8 7.8 0 0 1-3.98-1.09l-.28-.17-2.91.72.78-2.83-.18-.29A7.8 7.8 0 1 1 12 19.8Zm4.28-5.85c-.23-.12-1.37-.68-1.58-.76-.21-.08-.36-.12-.51.12-.15.23-.59.76-.72.92-.13.15-.27.17-.5.06-.23-.12-.98-.36-1.86-1.15-.69-.61-1.15-1.36-1.28-1.59-.13-.23-.01-.35.1-.47.1-.1.23-.27.34-.4.12-.14.15-.24.23-.4.08-.15.04-.3-.02-.42-.06-.12-.51-1.23-.7-1.69-.18-.44-.37-.38-.51-.39h-.43c-.15 0-.4.06-.61.29-.21.23-.8.78-.8 1.9s.82 2.21.93 2.36c.12.15 1.61 2.46 3.9 3.45.54.23.97.37 1.3.47.55.17 1.05.15 1.45.09.44-.07 1.37-.56 1.56-1.1.19-.54.19-1 .13-1.1-.05-.1-.2-.16-.43-.28Z"/>
-</svg>
-اطلب عبر واتساب
-</a>
+<div class="hero-grid"><img class="hero-logo" src="assets/logo.png" alt="Fokhara logo"><div><span class="eyebrow">أصالة الطعم في كل فخارة</span><h1>قائمة فخارة</h1><div class="actions">
+
+
 </div></div></div>
 </section>
 <nav class="nav"><div class="nav-scroll" id="nav"></div></nav>
@@ -132,9 +136,17 @@
 <section class="section" id="offers"><div class="section-head"><h2><span>FAMILY OFFERS</span>عروض العيلة</h2><p>اختيارات كبيرة للمشاركة والقيمة الأفضل</p></div><div class="offer-grid"><article class="card offer big"><div class="tag">عرض مميز</div><h3>فرخة مشوية مع الأرز والمحاشي</h3><p class="desc">فرخة مشوية مع أرز ومحاشي وشوربة ضمن اختيارات عروض العيلة.</p><div class="offer-price">420 <small>جنيه</small></div></article><article class="card offer"><div class="tag">قيمة أفضل</div><h3>تشكيلات فخارة</h3><p class="desc">تشكيلات عائلية متنوعة من المشويات والأرز والمحاشي حسب القائمة الأصلية.</p><div class="offer-price">450 <small>جنيه</small></div></article></div></section>
 <section class="section" id="contact"><div class="section-head"><h2><span>CONTACT</span>تواصل مع فخارة</h2></div><div class="contact"><div class="card"><div class="tag">للطلب والتوصيل</div><div class="phone">01208611197</div><div class="phone">01208611198</div><div class="phone">01004451689</div></div><div class="card"><div class="tag">العنوان</div><div class="address">الإسكندرية<br>العجمي الكيلو 21<br>قبل مدخل أكتوبر بجوار فرع أورنج</div></div></div></section>
 <footer class="footer"><img src="assets/logo.png" alt="فخارة"><h3>فخارة</h3><p>طعم شرقي</p><p>جودة بلدي</p><p>مطعم فخارة</p></footer>
-</div><a class="float-wa" href="tel:01208611197" aria-label="اتصال"><svg class="phone-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M7.1 3.5 9.6 3c.7-.1 1.3.3 1.5 1l1 3.1c.2.6 0 1.2-.5 1.6l-1.5 1.1c1 2 2.6 3.6 4.6 4.6l1.1-1.5c.4-.5 1-.7 1.6-.5l3.1 1c.7.2 1.1.8 1 1.5l-.5 2.5c-.2 1-1.1 1.7-2.1 1.6C11.5 17.6 6.4 12.5 4.5 5.6c-.3-1 .5-1.9 1.6-2.1Z"/>
-    </svg></a>
+</div>
+<a class="float-whatsapp" href="https://wa.me/201004451689" target="_blank" rel="noreferrer" aria-label="واتساب">
+  <svg class="float-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M12 2.2a9.8 9.8 0 0 0-8.45 14.75L2.3 21.7l4.9-1.2A9.8 9.8 0 1 0 12 2.2Zm0 17.6a7.8 7.8 0 0 1-3.98-1.09l-.28-.17-2.91.72.78-2.83-.18-.29A7.8 7.8 0 1 1 12 19.8Zm4.28-5.85c-.23-.12-1.37-.68-1.58-.76-.21-.08-.36-.12-.51.12-.15.23-.59.76-.72.92-.13.15-.27.17-.5.06-.23-.12-.98-.36-1.86-1.15-.69-.61-1.15-1.36-1.28-1.59-.13-.23-.01-.35.1-.47.1-.1.23-.27.34-.4.12-.14.15-.24.23-.4.08-.15.04-.3-.02-.42-.06-.12-.51-1.23-.7-1.69-.18-.44-.37-.38-.51-.39h-.43c-.15 0-.4.06-.61.29-.21.23-.8.78-.8 1.9s.82 2.21.93 2.36c.12.15 1.61 2.46 3.9 3.45.54.23.97.37 1.3.47.55.17 1.05.15 1.45.09.44-.07 1.37-.56 1.56-1.1.19-.54.19-1 .13-1.1-.05-.1-.2-.16-.43-.28Z"/>
+  </svg>
+</a>
+<a class="float-wa" href="tel:01208611197" aria-label="اتصال">
+  <svg class="phone-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M7.1 3.5 9.6 3c.7-.1 1.3.3 1.5 1l1 3.1c.2.6 0 1.2-.5 1.6l-1.5 1.1c1 2 2.6 3.6 4.6 4.6l1.1-1.5c.4-.5 1-.7 1.6-.5l3.1 1c.7.2 1.1.8 1 1.5l-.5 2.5c-.2 1-1.1 1.7-2.1 1.6C11.5 17.6 6.4 12.5 4.5 5.6c-.3-1 .5-1.9 1.6-2.1Z"/>
+  </svg>
+</a>
 <script>
 const sections=[
 {key:'chicken',title:'الفراخ',en:'CHICKEN',items:[
