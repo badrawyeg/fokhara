@@ -26,17 +26,18 @@
   .nav-scroll{scroll-snap-type:x proximity}
   .chip{scroll-snap-align:start;flex:0 0 auto}
   .section{scroll-margin-top:82px}
-  .grid{grid-template-columns:1fr;gap:12px}
-  .card{min-width:0;padding:17px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .card{min-width:0;padding:12px;border-radius:18px}
   .card.featured{min-height:0}
-  .photo{height:min(48vw,210px);min-height:145px}
-  .name{font-size:18px;line-height:1.5}
-  .desc{font-size:12px;line-height:1.9}
+  .photo{height:92px;min-height:0;margin-bottom:8px;border-radius:13px}
+  .name{font-size:14px;line-height:1.45;margin-bottom:2px}
+  .desc{font-size:9.5px;line-height:1.5;margin-bottom:7px}
   .price-row{align-items:center}
-  .prices{gap:6px}
-  .price{font-size:13px;padding:7px 9px}
-  .single-price,.offer-price{font-size:25px}
-  .offer-grid,.contact{grid-template-columns:1fr;gap:12px}
+  .prices{gap:4px}
+  .price{font-size:10px;padding:4px 5px;border-radius:8px}
+  .price small{font-size:7px;margin-left:2px}
+  .single-price,.offer-price{font-size:18px}
+  .offer-grid,.contact{grid-template-columns:1fr;gap:10px}
   .offer{min-height:0}
   .section-head{margin-bottom:14px}
   .section-head h2{font-size:25px;line-height:1.35}
@@ -60,18 +61,18 @@
   .section-head h2{font-size:22px}
   .section-head h2 span{font-size:10px}
   .section-head p{font-size:11px}
-  .grid{gap:8px}
-  .card{padding:13px 14px;border-radius:20px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .card{padding:11px;border-radius:18px}
   .card.featured{min-height:0}
-  .photo{height:120px;min-height:0;margin-bottom:10px;border-radius:15px}
-  .tag{font-size:9px;margin-bottom:3px}
-  .name{font-size:16px;line-height:1.35;margin-bottom:2px}
-  .desc{font-size:10.5px;line-height:1.55;margin-bottom:8px}
-  .price-row{gap:6px}
-  .prices{gap:4px}
-  .price{font-size:11px;padding:5px 7px;border-radius:9px}
-  .price small{font-size:8px}
-  .single-price,.offer-price{font-size:21px}
+  .photo{height:88px;min-height:0;margin-bottom:7px;border-radius:12px}
+  .tag{font-size:8px;margin-bottom:2px}
+  .name{font-size:14px;line-height:1.4;margin-bottom:2px}
+  .desc{font-size:9px;line-height:1.45;margin-bottom:6px}
+  .price-row{gap:4px}
+  .prices{gap:3px}
+  .price{font-size:9.5px;padding:4px 5px;border-radius:8px}
+  .price small{font-size:7px}
+  .single-price,.offer-price{font-size:18px}
   .offer{padding:15px;min-height:0}
   .offer h3{font-size:19px;margin-bottom:4px}
   .contact .card{padding:16px}
@@ -82,11 +83,20 @@
 }
 @media(max-width:360px){
   .section{margin:20px 0}
-  .card{padding:11px 12px}
-  .photo{height:105px}
-  .name{font-size:15px}
-  .desc{font-size:10px}
-  .price{font-size:10px;padding:4px 6px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+  .card{padding:9px;border-radius:15px}
+  .photo{height:78px}
+  .name{font-size:13px}
+  .desc{font-size:8.5px}
+  .price{font-size:9px;padding:3px 4px}
+}
+
+
+@media(max-width:560px){
+  /* Two-column mobile menu: compact cards for fast browsing */
+  .grid .card{display:flex;flex-direction:column}
+  .grid .card .price-row{margin-top:auto}
+  .grid .card.featured:before{width:130px;height:130px;inset:auto auto -60px -45px}
 }
 
 </style>
